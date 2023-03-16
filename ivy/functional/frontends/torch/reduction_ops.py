@@ -182,3 +182,8 @@ quantile.unsupported_dtypes = {
 @to_ivy_arrays_and_back
 def count_nonzero(input, dim=None):
     return ivy.count_nonzero(input, axis=dim).astype(ivy.int64)
+
+
+@to_ivy_arrays_and_back
+def median(input, dim=None, keepdim=False, *, out=None):
+    return ivy.median(input, axis=dim, keepdims=keepdim, out=out)
